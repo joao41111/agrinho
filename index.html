@@ -2,121 +2,291 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agro Forte, Futuro Sustentável</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AgroSphere Tech Portal | Agronegócio Inteligente e Sustentável</title>
+
+  <meta name="description" content="Plataforma premium de agronegócio com analytics rurais, commodities em tempo real, IoT agrícola, ESG e inteligência climática global." />
+
+  <meta property="og:title" content="AgroSphere Tech Portal" />
+  <meta property="og:description" content="Tecnologia, dados e inovação para o futuro do agronegócio global." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <header class="hero">
-    <nav>
-      <h1>🌱 Agro Forte</h1>
+  <!-- CANVAS BACKGROUND -->
+  <canvas id="particles-canvas"></canvas>
 
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#beneficios">Benefícios</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#dados">Dados</a></li>
-      </ul>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="ticker">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header glass">
+    <div class="logo">
+      <span class="logo-mark"></span>
+      AgroSphere
+    </div>
+
+    <nav class="nav">
+      <a href="#about">ESG</a>
+      <a href="#production">Produção</a>
+      <a href="#tech">Tech</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#news">Notícias</a>
+      <a href="#contact">Contato</a>
     </nav>
 
-    <div class="hero-content">
-      <h2>Agro forte, futuro sustentável</h2>
-      <p>
-        Equilíbrio entre produção agrícola e preservação ambiental para garantir alimento, tecnologia e qualidade de vida.
-      </p>
-
-      <button id="explorarBtn">Explorar</button>
+    <div class="header-actions">
+      <input id="searchInput" type="text" placeholder="Buscar notícias..." aria-label="Buscar notícias" />
+      <button id="themeToggle" class="theme-btn">☀</button>
     </div>
-
-    <div class="floating-leaf leaf1">🍃</div>
-    <div class="floating-leaf leaf2">🌿</div>
-    <div class="floating-leaf leaf3">🌱</div>
   </header>
 
-  <section id="sobre" class="section reveal">
-    <div class="text">
-      <h2>🌎 Agricultura Sustentável</h2>
+  <!-- HERO -->
+  <section class="hero">
+
+    <img
+      class="hero-bg"
+      src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format&fit=crop"
+      alt="Campo agrícola moderno"
+    />
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        AGRICULTURA INTELIGENTE GLOBAL
+      </div>
+
+      <h1>
+        O Futuro do Agronegócio
+        é Dados, Automação e Sustentabilidade.
+      </h1>
+
       <p>
-        A agricultura sustentável busca aumentar a produção de alimentos utilizando práticas responsáveis que preservam os recursos naturais.
+        Uma plataforma de inteligência rural com análise de commodities,
+        ESG, IoT agrícola e monitoramento climático em tempo real.
       </p>
 
+      <div class="hero-stats">
+
+        <div class="stat-card glass">
+          <h3 id="statExports">0</h3>
+          <span>US$ Bi Exportação</span>
+        </div>
+
+        <div class="stat-card glass">
+          <h3 id="statArea">0</h3>
+          <span>Milhões ha cultivados</span>
+        </div>
+
+        <div class="stat-card glass">
+          <h3 id="statGDP">0</h3>
+          <span>% PIB Agro Global</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+
+    <div class="section-title">
+      <h2>ESG & Transformação do Agro</h2>
       <p>
-        O uso de tecnologia no campo, irrigação inteligente, energia limpa e preservação das florestas são fundamentais para o futuro.
+        Evolução do agronegócio através de tecnologia, sustentabilidade e inteligência de dados.
       </p>
     </div>
 
-    <div class="image">
-      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Plantação">
+    <div class="timeline">
+
+      <div class="timeline-item glass">
+        <span>1950</span>
+        <h3>Mecanização Agrícola</h3>
+        <p>O início da modernização com tratores e expansão da produtividade rural.</p>
+      </div>
+
+      <div class="timeline-item glass">
+        <span>2000</span>
+        <h3>Agricultura de Precisão</h3>
+        <p>Uso de GPS, sensores e automação no campo.</p>
+      </div>
+
+      <div class="timeline-item glass">
+        <span>2026</span>
+        <h3>IA e Agricultura Digital</h3>
+        <p>Decisões agrícolas orientadas por inteligência artificial e dados climáticos.</p>
+      </div>
+
     </div>
+
   </section>
 
-  <section id="beneficios" class="cards-section">
-    <h2 class="title reveal">Benefícios do Agro Sustentável</h2>
+  <!-- PRODUCTION -->
+  <section id="production" class="section reveal">
 
-    <div class="cards">
-      <div class="card reveal">
-        <span>🌱</span>
-        <h3>Preservação Ambiental</h3>
-        <p>Redução de impactos ambientais e conservação da biodiversidade.</p>
-      </div>
+    <div class="section-title">
+      <h2>Produção Agrícola</h2>
+    </div>
 
-      <div class="card reveal">
-        <span>💧</span>
-        <h3>Uso Inteligente da Água</h3>
-        <p>Sistemas modernos economizam água e aumentam a eficiência.</p>
-      </div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="soja">Soja</button>
+      <button class="tab-btn" data-tab="milho">Milho</button>
+      <button class="tab-btn" data-tab="trigo">Trigo</button>
+    </div>
 
-      <div class="card reveal">
-        <span>⚡</span>
-        <h3>Energia Renovável</h3>
-        <p>Uso de energia solar e tecnologias limpas no campo.</p>
-      </div>
-
-      <div class="card reveal">
-        <span>🚜</span>
-        <h3>Tecnologia no Campo</h3>
-        <p>Máquinas modernas aumentam produtividade com menos desperdício.</p>
+    <div class="tab-content active" id="soja">
+      <div class="culture-card glass">
+        <h3>Soja</h3>
+        <p>Brasil lidera exportação global com alta eficiência produtiva e tecnologia de plantio.</p>
       </div>
     </div>
-  </section>
 
-  <section id="galeria" class="gallery-section">
-    <h2 class="title reveal">🌾 Galeria Sustentável</h2>
-
-    <div class="gallery">
-      <img class="reveal" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop" alt="Campo">
-      <img class="reveal" src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop" alt="Agricultura">
-      <img class="reveal" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop" alt="Natureza">
-      <img class="reveal" src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1200&auto=format&fit=crop" alt="Plantação">
-    </div>
-  </section>
-
-  <section id="dados" class="stats-section">
-    <h2 class="title reveal">📊 Impactos Positivos</h2>
-
-    <div class="stats">
-      <div class="stat reveal">
-        <h3 class="counter" data-target="85">0</h3>
-        <p>% de economia de água</p>
-      </div>
-
-      <div class="stat reveal">
-        <h3 class="counter" data-target="70">0</h3>
-        <p>% menos desperdício</p>
-      </div>
-
-      <div class="stat reveal">
-        <h3 class="counter" data-target="90">0</h3>
-        <p>% aumento de eficiência</p>
+    <div class="tab-content" id="milho">
+      <div class="culture-card glass">
+        <h3>Milho</h3>
+        <p>Híbridos avançados aumentam resistência climática e produtividade por hectare.</p>
       </div>
     </div>
+
+    <div class="tab-content" id="trigo">
+      <div class="culture-card glass">
+        <h3>Trigo</h3>
+        <p>Monitoramento climático melhora previsibilidade e reduz perdas agrícolas.</p>
+      </div>
+    </div>
+
   </section>
 
-  <footer>
-    <p>🌿 Agro Forte • Futuro Sustentável • 2026</p>
+  <!-- TECH -->
+  <section id="tech" class="section reveal">
+
+    <div class="section-title">
+      <h2>Tech Field IoT</h2>
+    </div>
+
+    <div class="tech-grid">
+
+      <div class="tech-card glass">
+        <h3>Drones</h3>
+        <p>Mapeamento aéreo e pulverização inteligente de precisão.</p>
+      </div>
+
+      <div class="tech-card glass">
+        <h3>Sensores de Solo</h3>
+        <p>Monitoramento contínuo de umidade, nutrientes e pH.</p>
+      </div>
+
+      <div class="tech-card glass">
+        <h3>IA Climática</h3>
+        <p>Previsão de safra baseada em modelos climáticos avançados.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ANALYTICS -->
+  <section id="analytics" class="section reveal">
+
+    <div class="section-title">
+      <h2>Agro Analytics</h2>
+    </div>
+
+    <div class="analytics-grid">
+
+      <div class="chart-card glass">
+        <h3>Commodities</h3>
+        <canvas id="commodityChart"></canvas>
+      </div>
+
+      <div class="chart-card glass">
+        <h3>Clima</h3>
+        <canvas id="climateChart"></canvas>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MACHINES -->
+  <section class="section reveal">
+
+    <div class="section-title">
+      <h2>Máquinas Agrícolas</h2>
+    </div>
+
+    <div class="machine-grid" id="machineGrid"></div>
+
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="section reveal">
+
+    <div class="section-title">
+      <h2>Portal de Notícias</h2>
+    </div>
+
+    <div class="news-filter">
+
+      <button class="filter-btn active" data-category="all">Todas</button>
+      <button class="filter-btn" data-category="mercado">Mercado</button>
+      <button class="filter-btn" data-category="clima">Clima</button>
+      <button class="filter-btn" data-category="tecnologia">Tecnologia</button>
+
+    </div>
+
+    <div class="news-grid" id="newsGrid"></div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal">
+
+    <div class="section-title">
+      <h2>Contato</h2>
+    </div>
+
+    <form id="contactForm" class="contact-form glass">
+
+      <input id="name" type="text" placeholder="Nome" required />
+      <input id="email" type="email" placeholder="Email" required />
+      <input id="phone" type="tel" placeholder="Telefone" required />
+      <textarea id="message" placeholder="Mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div>© 2026 AgroSphere Tech Portal</div>
+
+    <div class="footer-links">
+      <a href="#">Privacidade</a>
+      <a href="#">ESG</a>
+      <a href="#">Tecnologia</a>
+    </div>
+
   </footer>
 
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
   <script src="script.js"></script>
+
 </body>
 </html>
